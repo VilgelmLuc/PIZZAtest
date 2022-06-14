@@ -264,6 +264,21 @@ address {
   display: flex;
   flex-direction: column;
   margin-right: 32px;
+  opacity: 0;
+  transition: 0,8s;
+  animation: show 1.5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0,4s;
+}
+
+@keyframes show {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
 
 .event__item:last-child {
@@ -348,7 +363,7 @@ address {
   margin: 0 32px 32px 0;
   box-shadow: 0px 2px 5px rgba(165, 169, 176, 0.3);
   border-radius: 5px;
-  transition: 600;
+  transition: 600ms;
 
 }
 .pizza-menu__item:nth-child(4n + 4) {
@@ -359,17 +374,21 @@ address {
   padding: 12px;
 opacity: 0;
  z-index: 5;
- transition: 600;
+ transition: 400ms;
 }
 
 .pizza-menu__item:hover .type__icon{
 opacity: 1;
-transition: 600;
+transition: 400ms;
 
 }
+.pizza-menu__item:hover .pizza-menu__title{
+  color: #e52d2d;
+  transition: 0,3s;
+}
 .pizza-menu__item:hover{
-top: -10px;
-transition: 600;
+margin-top: -10px;
+transition: 600ms;
 }
 .pizza-menu__title {
   font-family: "Alegreya";
@@ -379,6 +398,8 @@ transition: 600;
   line-height: 30px;
   margin-bottom: 6px;
   text-align: center;
+  transition: 0,3s;
+
 }
 
 .pizza-menu__subtitle {
@@ -582,11 +603,11 @@ color: #848A9A;
 }
 
 .photo__list {
+  max-width: 1920px;
 padding-top: 46px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
+
 }
 
 .photo__item{
