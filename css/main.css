@@ -14,6 +14,15 @@
     opacity: 1;
   }
 }
+@keyframes rotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  
+  100% {
+    transform:rotate(360deg);
+  }
+}
 html {
   height: 100%;
 }
@@ -350,7 +359,7 @@ address {
 }
 @media screen and (max-width: 321px) {
   .container__hero {
-    background: url(./IMG/img-bg.png) no-repeat 900px;
+    background: url(./IMG/img-bg.png) no-repeat 100px;
   }
 }
 
@@ -396,6 +405,12 @@ address {
 
 .hero__img {
   position: relative;
+  
+}
+.pizza__main{
+  animation: rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 40s;
 }
 .hero__img::before {
   content: "";
@@ -554,6 +569,7 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .pizza-menu__item {
@@ -564,7 +580,9 @@ address {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 304px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
   margin: 0 32px 32px 0;
   -webkit-box-shadow: 0px 2px 5px rgba(165, 169, 176, 0.3);
           box-shadow: 0px 2px 5px rgba(165, 169, 176, 0.3);
@@ -572,8 +590,18 @@ address {
   -webkit-transition: 600ms;
   transition: 600ms;
 }
-.pizza-menu__item:nth-child(4n+4) {
+.pizza-menu__item:nth-child(4n) {
   margin: 0 0px 32px 0;
+}
+@media screen and (max-width: 835px) {
+  .pizza-menu__item:nth-child(4n) {
+    margin: 0 32px 32px 0;
+  }
+}
+@media screen and (max-width: 835px) {
+  .pizza-menu__item:nth-child(3n) {
+    margin: 0 0px 32px 0;
+  }
 }
 .pizza-menu__item:hover {
   margin-top: -10px;
@@ -589,6 +617,11 @@ address {
   color: #e52d2d;
   -webkit-transition: 0, 3s;
   transition: 0, 3s;
+}
+@media screen and (max-width: 835px) {
+  .pizza-menu__item {
+    min-width: 226px;
+  }
 }
 
 .type__icon {
@@ -680,9 +713,14 @@ address {
 }
 
 .pizza-order__btn {
-  width: 240px;
+  max-width: 240px;
   height: 52px;
   margin: 0 auto 40px;
+}
+@media screen and (max-width: 835px) {
+  .pizza-order__btn {
+    max-width: 196px;
+  }
 }
 
 .container__1920 {
@@ -832,7 +870,7 @@ address {
 }
 
 .benefits__content {
-  width: 416px;
+  max-width: 416px;
 }
 
 .benefits__content--title {

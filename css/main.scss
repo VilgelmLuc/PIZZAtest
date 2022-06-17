@@ -39,6 +39,14 @@ $mobile: 321px;
     opacity: 1;
   }
 }
+@keyframes rotate {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
 html {
   height: 100%;
 }
@@ -167,21 +175,20 @@ header {
   align-items: center;
   height: 176px;
   @include tablets {
-justify-content: space-between; 
+    justify-content: space-between;
   }
-   @include mobile {
-    justify-content: space-between; 
-}
-  
+  @include mobile {
+    justify-content: space-between;
+  }
 }
 .logo {
   min-width: 182px;
   @include tablets {
     left: 0;
-   }
-   @include mobile {
+  }
+  @include mobile {
     left: 0;
-   }
+  }
 }
 address {
   display: flex;
@@ -201,10 +208,10 @@ address {
   font-family: $font-family_3;
   text-transform: uppercase;
   @include tablets {
-   display: none;
+    display: none;
   }
   @include mobile {
-   display: none;
+    display: none;
   }
 }
 .navbar__item {
@@ -223,10 +230,10 @@ address {
   margin-left: 12px;
   @include tablets {
     display: none;
-   }
-   @include mobile {
+  }
+  @include mobile {
     display: none;
-   }
+  }
 }
 .phone__title {
   font-weight: 900;
@@ -254,10 +261,10 @@ address {
   margin-left: 12px;
   @include tablets {
     display: none;
-   }
-   @include mobile {
+  }
+  @include mobile {
     display: none;
-   }
+  }
 }
 .lang-switch {
   margin-left: 44px;
@@ -273,8 +280,6 @@ address {
   height: 630px;
   margin-bottom: 100px;
   backface-visibility: visible;
-  
-  
 }
 .container__hero {
   margin: 0 auto;
@@ -282,10 +287,10 @@ address {
   background: url(./IMG/img-bg.png) no-repeat 900px;
   @include tablets {
     background: url(./IMG/img-bg.png) no-repeat 500px;
-}
-   @include mobile {
-    background: url(./IMG/img-bg.png) no-repeat 900px;
-}
+  }
+  @include mobile {
+    background: url(./IMG/img-bg.png) no-repeat 100px;
+  }
 }
 .hero__content {
   width: 50%;
@@ -334,14 +339,14 @@ address {
     top: 320px;
     left: -70px;
     @include tablets {
-        width: 152px;
-    height: 152px;
-        top: 285px;
-        left: 20px; 
-          }
-           @include mobile {
-            justify-content: space-between; 
-        }
+      width: 152px;
+      height: 152px;
+      top: 285px;
+      left: 20px;
+    }
+    @include mobile {
+      justify-content: space-between;
+    }
   }
 }
 .pizza__main {
@@ -357,7 +362,7 @@ address {
   justify-content: space-around;
   @include mobile {
     flex-direction: column;
-   }
+  }
 }
 .event__item {
   display: flex;
@@ -397,7 +402,6 @@ address {
   margin-bottom: 100px;
 }
 .choose-pizza__title {
- 
   margin-bottom: 55px;
 }
 .pizza-types__list {
@@ -428,18 +432,29 @@ address {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 .pizza-menu__item {
   display: flex;
   flex-direction: column;
-  width: 304px;
+  max-width: 304px;
   margin: 0 32px 32px 0;
   box-shadow: 0px 2px 5px rgba(165, 169, 176, 0.3);
   border-radius: 5px;
   transition: 600ms;
-  &:nth-child(4n + 4) {
+     
+     
+}
+  &:nth-child(4n) {
     margin: 0 0px 32px 0;
+    @include tablets {
+       &:nth-child(3n) {
+    margin: 0 0px 32px 0;
+    
+}
   }
+
+  
 
   &:hover {
     .type__icon {
@@ -453,6 +468,9 @@ address {
     margin-top: -10px;
     transition: 600ms;
   }
+  @include tablets {
+    max-width: 226px;
+  
 }
 .type__icon {
   text-align: left;
@@ -527,9 +545,12 @@ address {
   text-align: center;
 }
 .pizza-order__btn {
-  width: 240px;
+  max-width: 240px;
   height: 52px;
   margin: 0 auto 40px;
+  @include tablets{
+      max-width: 196px;
+  }
 }
 .container__1920 {
   max-width: 1920;
@@ -550,11 +571,10 @@ address {
   display: flex;
   @include tablets {
     flex-direction: row;
-   }
-   @include mobile {
+  }
+  @include mobile {
     flex-direction: column;
-   }
-  
+  }
 }
 .delandpay__content {
   display: flex;
@@ -569,28 +589,28 @@ address {
     margin-right: 0px;
   }
   @include tablets {
-   flex-direction: column;
-   text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
   @include mobile {
-   flex-direction: row;
+    flex-direction: row;
   }
 }
 .delandpay__icon {
   padding: 32px 24px;
   @include tablets {
-      padding-top: 26px;   
-margin-bottom: 15px;
-}
+    padding-top: 26px;
+    margin-bottom: 15px;
+  }
 }
 .delandpay__desc {
   padding: 36px 24px 36px 0;
-  @include tablets {padding: 0px  20px;   }
-
+  @include tablets {
+    padding: 0px 20px;
+  }
 }
 .delandpay-task__title {
-    margin-bottom: 6px;
- 
+  margin-bottom: 6px;
 }
 .delandpay-task__subtitle {
   font-family: $font-family_4;
@@ -618,9 +638,9 @@ margin-bottom: 15px;
   border-radius: 40%;
 }
 .benefits__content {
-  width: 416px;
+  max-width: 416px;
 }
-.benefits__content--title { 
+.benefits__content--title {
   margin-bottom: 12px;
 }
 .benefits__content--subtitle {
@@ -638,7 +658,6 @@ margin-bottom: 15px;
 }
 .inst__title {
   margin-bottom: 13px;
- 
 }
 .inst__link {
   margin-bottom: 46px;
@@ -660,11 +679,10 @@ margin-bottom: 15px;
   width: 20%;
   @include tablets {
     width: 33%;
-   
-   }
-   @include mobile {
+  }
+  @include mobile {
     width: 50%;
-}
+  }
 }
 .container__footer {
   background-color: $background-color_5;
