@@ -185,6 +185,8 @@ header {
   width: 182px;
   @include tablets {
     left: 0;
+    min-width: 130px;
+
   }
   @include mobile {
     left: 0;
@@ -440,7 +442,7 @@ address {
   transition: 400ms;
   position: relative;
 
-  &:hover {
+  &:hover{
     transition: 400ms;
     color: $color_4;
     :before {
@@ -457,6 +459,7 @@ address {
     height: 24px;
     z-index: -5;
     top: 0px;
+    
   }
   &:last-child {
     margin-right: 0px;
@@ -660,6 +663,7 @@ address {
 .benefits__list {
   margin-top: 95px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-bottom: 110px;
@@ -687,7 +691,6 @@ address {
 .benefits__pic {
   margin: 15px 32px;
   border-radius: 40%;
-  margin-left: 300px;
   
   @include tablets {
     width: 254px;

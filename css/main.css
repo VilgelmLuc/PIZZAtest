@@ -216,6 +216,7 @@ header {
 @media screen and (max-width: 835px) {
   .logo {
     left: 0;
+    min-width: 130px;
   }
 }
 @media screen and (max-width: 321px) {
@@ -589,7 +590,7 @@ address {
   transition: 400ms;
   color: #e52d2d;
 }
-.pizza-types__item:hover :before {
+.pizza-types__item:hover:before {
   top: -30px;
   -webkit-transition: 700ms;
   transition: 700ms;
@@ -895,6 +896,9 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -944,7 +948,6 @@ address {
 .benefits__pic {
   margin: 15px 32px;
   border-radius: 40%;
-  margin-left: 300px;
 }
 @media screen and (max-width: 835px) {
   .benefits__pic {
