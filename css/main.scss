@@ -715,9 +715,12 @@ opacity: 0;
     font-size: 20px;
     line-height: 27px;
   }
-  @include tablets{
+  @include mobile{
     font-size: 18px;
 line-height: 24px;
+margin-bottom: 0px;
+padding-top: 20px;
+
   }
 }
 .pizza-menu__subtitle {
@@ -735,6 +738,8 @@ line-height: 24px;
     padding: 0;
     font-size: 11px;
     line-height: 16px;
+    margin-bottom: 4px;
+
   }
 }
 .pizza-size__title {
@@ -877,6 +882,8 @@ align-items: center;
     flex-direction: row;
     margin-right: 0px;
     margin-bottom: 12px;
+    max-width: 288px;
+
   }
 }
 .delandpay__icon {
@@ -884,7 +891,10 @@ align-items: center;
   @include tablets {
     padding-top: 26px;
     margin-bottom: 15px;
-  }
+    }
+  @include mobile {
+  margin: 14px;
+   }
 }
 .delandpay__desc {
   padding: 36px 24px 36px 0;
@@ -1022,6 +1032,8 @@ align-items: center;
   margin-right: 101px;
   @include mobile {
     margin-right: 0px;
+    margin-bottom: 26px;
+
   }
 }
 
@@ -1034,4 +1046,7 @@ align-items: center;
   line-height: 18px;
   right: 3%;
   text-align: center;
+  @include mobile{
+    margin-top: 10px;
+  }
 }
