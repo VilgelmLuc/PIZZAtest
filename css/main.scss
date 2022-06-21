@@ -40,13 +40,13 @@ $mobile: 321px;
   }
 }
 @keyframes rotate {
-    0% {
-      rotate: 0deg;
-    }
-    100% {
-      rotate: 360deg;
-    }
+  0% {
+    transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 html {
   height: 100%;
 }
@@ -178,16 +178,17 @@ header {
     justify-content: space-between;
   }
   @include mobile {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 .logo {
-  min-width: 182px;
+  width: 182px;
   @include tablets {
     left: 0;
   }
   @include mobile {
     left: 0;
+    min-width: 85px;
   }
 }
 address {
@@ -226,7 +227,10 @@ address {
     margin-left: 0;
   }
 }
-.contact__desc {
+.contact__icon {
+  min-width: 40px;
+}
+.contact__desc--header {
   margin-left: 12px;
   @include tablets {
     display: none;
@@ -277,9 +281,13 @@ address {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 630px;
+  height: auto;
   margin-bottom: 100px;
   backface-visibility: visible;
+  @include mobile {
+    flex-direction: column-reverse;
+    width: 320px;
+  }
 }
 .container__hero {
   margin: 0 auto;
@@ -289,12 +297,15 @@ address {
     background: url(./IMG/img-bg.png) no-repeat 500px;
   }
   @include mobile {
-    background: url(./IMG/img-bg.png) no-repeat 100px;
+    background: none;
   }
 }
 .hero__content {
   width: 50%;
   position: relative;
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .hero__subtitle {
@@ -329,6 +340,7 @@ address {
 }
 .hero__img {
   position: relative;
+
   &::before {
     content: "";
     background: url(./IMG/img-leaves.png) no-repeat;
@@ -338,6 +350,9 @@ address {
     position: absolute;
     top: 320px;
     left: -70px;
+    @include mobile {
+      display: none;
+    }
     @include tablets {
       width: 152px;
       height: 152px;
@@ -351,6 +366,9 @@ address {
 }
 .pizza__main {
   position: relative;
+  animation: rotate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .event {
@@ -416,12 +434,29 @@ address {
   text-transform: uppercase;
   color: $color_3;
 }
+
 .pizza-types__item {
   margin-right: 40px;
   transition: 400ms;
+  position: relative;
+
   &:hover {
     transition: 400ms;
     color: $color_4;
+    :before {
+      top: -30px;
+      transition: 700ms;
+    }
+  }
+  &:before {
+    content: "";
+    background: url(./IMG/Frame\ 14.jpg) no-repeat;
+    position: absolute;
+    left: 35%;
+    width: 24px;
+    height: 24px;
+    z-index: -5;
+    top: 0px;
   }
   &:last-child {
     margin-right: 0px;
@@ -442,19 +477,18 @@ address {
   box-shadow: 0px 2px 5px rgba(165, 169, 176, 0.3);
   border-radius: 5px;
   transition: 600ms;
-     
-     
-}
+
   &:nth-child(4n) {
     margin: 0 0px 32px 0;
     @include tablets {
-       &:nth-child(3n) {
-    margin: 0 0px 32px 0;
-    
-}
+      margin: 0 32px 32px 0;
+    }
   }
-
-  
+  @include tablets {
+    &:nth-child(3n) {
+      margin: 0 0px 32px 0;
+    }
+  }
 
   &:hover {
     .type__icon {
@@ -470,7 +504,7 @@ address {
   }
   @include tablets {
     max-width: 226px;
-  
+  }
 }
 .type__icon {
   text-align: left;
@@ -548,8 +582,8 @@ address {
   max-width: 240px;
   height: 52px;
   margin: 0 auto 40px;
-  @include tablets{
-      max-width: 196px;
+  @include tablets {
+    max-width: 196px;
   }
 }
 .container__1920 {
@@ -561,7 +595,6 @@ address {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 387px;
 }
 .delandpay__title {
   padding-top: 70px;
@@ -569,11 +602,14 @@ address {
 }
 .delandpay__task {
   display: flex;
+  margin-bottom: 80px;
   @include tablets {
     flex-direction: row;
   }
   @include mobile {
     flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 12px;
   }
 }
 .delandpay__content {
@@ -594,6 +630,8 @@ address {
   }
   @include mobile {
     flex-direction: row;
+    margin-right: 0px;
+    margin-bottom: 12px;
   }
 }
 .delandpay__icon {
@@ -625,18 +663,47 @@ address {
   flex-direction: column;
   align-items: center;
   margin-bottom: 110px;
+  @include mobile {
+    margin-top: 20px;
+  }
 }
 .benefits__item {
   display: flex;
   align-items: center;
   &:nth-child(2) {
     margin-left: 300px;
+    @include tablets {
+      margin-left: 150px;
+    }
+    @include mobile {
+      margin-left: 0px;
+      flex-direction: row-reverse;
+    }
+  }
+  @include mobile {
+    margin-bottom: 20px;
   }
 }
 .benefits__pic {
   margin: 15px 32px;
   border-radius: 40%;
+  margin-left: 300px;
+  
+  @include tablets {
+    width: 254px;
+    margin: 0 36px 0 0px;
+    &:nth-child(2) {    
+      margin: 0  0 0px 36px;
+    }
+  }
+  @include mobile {
+    width: 80px;
+    margin: 16px;
+
+  }
+  
 }
+
 .benefits__content {
   max-width: 416px;
 }
@@ -649,6 +716,10 @@ address {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  @include mobile {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 .inst {
   display: flex;
@@ -686,13 +757,33 @@ address {
 }
 .container__footer {
   background-color: $background-color_5;
-  height: 120px;
+  min-height: 120px;
   display: flex;
   align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    height: 208px;
+  }
 }
 .phone__title--footer {
   color: $color_6;
 }
 .logo__footer {
   margin-right: 101px;
+  @include mobile {
+    margin-right: 0px;
+  }
+}
+
+.politic {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  right: 3%;
+  text-align: center;
 }
