@@ -190,7 +190,7 @@ header {
     justify-content: space-between;
   }
   @include mobile {
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 }
 .logo {
@@ -210,6 +210,10 @@ address {
   justify-content: center;
   align-items: center;
   margin-left: 88px;
+  @include mobile {
+    margin-left: 20px;
+
+  }
 }
 
 .navbar__menu {
@@ -248,9 +252,10 @@ address {
     position: relative;
     width: 40px;
     height: 40px;
-    // margin-right: 10px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
+    z-index: 20;
   }
 }
 .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
@@ -274,9 +279,7 @@ width: 19px;
 .menu-burger__header:before{
   top: 9px;
 }
-.menu-burger__header.open-menu {
-  background:#000000; 
-}
+
 .menu-burger__header.open-menu span {
   opacity:0; 
   transition: 0.5s; 
@@ -293,6 +296,28 @@ width: 19px;
   bottom: 16px;
   transition: 0.4s;
   background: #ffffff;
+
+}
+// .navbar {
+// 	display: block;
+// 	position: absolute;
+//     top: 55px;
+//     background: #000000;
+//     box-shadow: #ccc;
+//     height: 1000%;
+//     width: 50%;
+//     box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.37);
+//     transition: all 0.4s ease;
+// 	left:-1000px;
+//   @include tablets{
+//     z-index: 20;
+//   }
+// }
+
+.navbar.open-menu{
+    left:490px;
+    color: #ffffff;
+    z-index: 20;
 
 }
 .contact__icon {
@@ -328,6 +353,9 @@ width: 19px;
   justify-content: center;
   align-items: center;
   margin-left: 60px;
+  @include mobile {
+    margin-left: 14px;
+  }
 }
 .basket__desc {
   margin-left: 12px;
@@ -409,9 +437,12 @@ width: 19px;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: $color_6;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include mobile{
+    width: 288px;
+  height: 52px;
+  }
 }
 .hero__img {
   position: relative;
@@ -628,8 +659,8 @@ width: 19px;
       margin: 0 32px 32px 0;
     }
     @include mobile {
-      &:nth-child(3n) {
-        margin: 32px;
+      &:nth-child(4n) {
+        margin: 12px;
       }
     }
   }
@@ -640,7 +671,7 @@ width: 19px;
   }
   @include mobile() {
     &:nth-child(3n) {
-      margin: 32px;
+      margin: 12px;
     }
   }
 
@@ -680,6 +711,14 @@ opacity: 0;
   margin-bottom: 6px;
   text-align: center;
   transition: 0, 3s;
+  @include tablets{
+    font-size: 20px;
+    line-height: 27px;
+  }
+  @include tablets{
+    font-size: 18px;
+line-height: 24px;
+  }
 }
 .pizza-menu__subtitle {
   font-family: $font-family_4;
@@ -694,7 +733,8 @@ opacity: 0;
   @include mobile {
     text-align: left;
     padding: 0;
-
+    font-size: 11px;
+    line-height: 16px;
   }
 }
 .pizza-size__title {
@@ -716,11 +756,21 @@ opacity: 0;
   justify-content: space-between;
   background-color: $background-color_2;
   align-items: center;
-  border: 2px;
+  border: 1px;
+  @include mobile {
+    width: 164px;
+
+  }
 }
 .pizza-size__item {
   text-align: center;
-  width: 33%;
+  width: 28%;
+  background-color: #ffffff;
+  margin: 3px;
+  border-radius: 3px;
+ display: flex;
+ justify-content: space-around;
+
 }
 .pizza-size__btn {
   border: none;
@@ -731,6 +781,8 @@ opacity: 0;
   line-height: 18px;
   text-align: center;
   color: $color_3;
+  background-color: #ffffff;
+
 }
 .pizza-price__title {
   font-family: $font-family_4;
@@ -740,6 +792,23 @@ opacity: 0;
   line-height: 30px;
   margin-bottom: 12px;
   text-align: center;
+  @include mobile{
+    width: 120px;
+  height: 28px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: $background-color_1;
+  color: $color_6;
+  text-align: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  font-family: $font-family_4;
+  font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+  color: #ffffff;
+  }
 }
 .pizza-order__btn {
   max-width: 240px;
