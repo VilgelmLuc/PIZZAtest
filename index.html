@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  
     <link rel="icon" href="./css/IMG/favicon.svg" type="image/x-icon" />
 
     <link
@@ -27,6 +28,7 @@
             <img src="./css/IMG/logo.png" alt="логотип ресторана"
           /></a>
         </div>
+       
         <nav class="navbar">
           <ul class="navbar__menu">
             <li class="navbar__item"><a href="#">меню</a></li>
@@ -64,9 +66,13 @@
         <button class="lang-switch">
           <img src="./css/IMG/Group72.png" alt="иконка переключения языка" />
         </button>
+         <div class="menu-burger__header">
+          <span></span>
+      </div>
       </header>    
     </div>
-      <main> <div class="container__hero">
+      <main>
+         <div class="container__hero">
           <div class="container">
         <section class="hero">
           <div class="hero__content">
@@ -81,12 +87,46 @@
           </div>
           <div class="hero__img">
             <img class="pizza__main" src="./css/IMG/pizzamain.png" alt="" />
+            <img class="pizza__main--mobile" src="./css/IMG/backmobile.jpg" alt="" />
           </div>
         </section>
     </div></div>
 
 <div class="container">
         <section class="event">
+          <ul class="event__list--slider">
+            <li class="event__item">
+              <div class="event__item--img">
+                <img src="./css/IMG/Event 1.svg" alt="" />
+              </div>
+              <div class="event__item--content">
+                <h4 class="event__item--title">Закажи 2 пиццы 3-я в подарок</h4>
+                <p class="event__item--subtitle">
+                  При заказе 2-х больших пицц – средняя пицца в подарок
+                </p>
+              </div>
+            </li>
+            <li class="event__item">
+              <div class="event__item--img">
+                <img src="./css/IMG/Event 2.svg" alt="" />
+              </div>
+              <div class="event__item--content">
+                <h4 class="event__item--title">Напиток в подарок</h4>
+                <p class="event__item--subtitle">
+                  Скидка на заказ от 3000 рублей + напиток в подарок
+                </p>
+              </div>
+            </li>
+            <li class="event__item">
+              <div class="event__item--img">
+                <img src="./css/IMG/Event 3.png" alt="" />
+              </div>
+              <div class="event__item--content">
+                <h4 class="event__item--title">25% при первом заказе</h4>
+                <p class="event__item--subtitle">Скидка новым клиентам!</p>
+              </div>
+            </li>
+          </ul>
           <ul class="event__list">
             <li class="event__item">
               <div class="event__item--img">
@@ -125,18 +165,28 @@
         <section class="choose-pizza">
           <h2 class=" choose-pizza__title"><a name="choose-pizza"> Выберите пиццу</a></h2>
           <ul class="pizza-types__list">
-            <li class="pizza-types__item all"><a href="#">все</a></li>
-            <li class="pizza-types__item peper"><a href="#">острые</a></li>
-            <li class="pizza-types__item meat"><a href="#">мясные</a></li>
-            <li class="pizza-types__item cheese"><a href="#">сырные</a></li>
-            <li class="pizza-types__item vegan"><a href="#">веганские</a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class="all"> <img src="./css/IMG/Frame 14.jpg" alt=""></span> все</a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class="all pepper"> <img src="./css/IMG/Frame 13.jpg" alt=""></span>острые</a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class="all meat"> <img src="./css/IMG/Frame 16.jpg" alt=""></span>мясные</a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class="all cheese"> <img src="./css/IMG/Frame 12.jpg" alt=""></span>сырные</a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class="all vegan"> <img src="./css/IMG/Frame 15.jpg" alt=""></span>веганские</a></li>
+          </ul>
+          <ul class="pizza-types__list--mobile">
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=""> <img src="./css/IMG/Frame 14.jpg" alt=""></span></a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=""> <img src="./css/IMG/Frame 13.jpg" alt=""></span></a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=" "> <img src="./css/IMG/Frame 16.jpg" alt=""></span></a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=" "> <img src="./css/IMG/Frame 12.jpg" alt=""></span></a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=" "> <img src="./css/IMG/Frame 15.jpg" alt=""></span></a></li>
           </ul>
           <ul class="pizza-menu__list">
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -155,12 +205,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -179,12 +233,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -203,12 +261,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -227,12 +289,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -251,12 +317,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -275,12 +345,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -299,12 +373,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -323,12 +401,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -347,12 +429,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -371,12 +457,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -395,12 +485,16 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
             <li class="pizza-menu__item">
+              <div class="pizza__item--img-content">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
               <span class="type__icon"><img src="#" alt="" /></span>
 
               <img src="./css/IMG/Group 111.png" alt="итальянская" />
+            </div>
+            <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
               <p class="pizza-menu__subtitle">
                 Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик
@@ -419,7 +513,10 @@
               </ul>
               <p class="pizza-price__title">от 699 руб.</p>
               <button class="btn pizza-order__btn">заказать</button>
+            </div>
             </li>
+
+            
 
    
           </ul>
@@ -531,5 +628,11 @@
         </div>
         
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="./scripts/slider.js"></script>
+  <script src="./scripts/menu.js"></script> 
+
   </body>
 </html>

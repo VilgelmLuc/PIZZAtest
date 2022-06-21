@@ -1,0 +1,22 @@
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+  
+  $tablets: 835px;
+  $mobile: 481px;
+
+.pizza-types__list--mobile{
+    display: none;
+    @include mobile{
+        display: block;
+        display: flex;
+    }
+}

@@ -2,6 +2,9 @@ $color_1: black;
 $color_2: inherit;
 $color_3: #000000;
 $color_4: #e52d2d;
+
+
+
 $color_5: #848a9a;
 $color_6: #ffffff;
 $color_7: #848a9a;
@@ -29,8 +32,10 @@ $background-color_5: #000000;
 }
 
 $tablets: 835px;
-$mobile: 321px;
+$mobile: 481px;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
+@import "./typelistMOB";
 @keyframes show {
   0% {
     opacity: 0;
@@ -47,6 +52,7 @@ $mobile: 321px;
     transform: rotate(360deg);
   }
 }
+
 html {
   height: 100%;
 }
@@ -88,6 +94,11 @@ h5 {
   letter-spacing: 1px;
 
   color: #000000;
+}
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  /* при наведении */
+a.text {
+  text-decoration: none;
 }
 
 h1 {
@@ -164,6 +175,7 @@ a {
   color: $color_2;
   text-decoration: none;
 }
+
 footer {
   display: block;
   max-width: 100%;
@@ -229,6 +241,60 @@ address {
     margin-left: 0;
   }
 }
+.menu-burger__header{
+  display: none;
+  @include tablets{
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    // margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+}
+.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+  height: 3px;
+  width: 24px;
+  position: absolute;
+  background: #000000;
+  margin: 0 auto;
+}
+.menu-burger__header:after{
+width: 19px;
+}
+
+
+.menu-burger__header:after, .menu-burger__header:before{
+  content: '';
+}
+.menu-burger__header:after{
+  bottom: 10px;
+}
+.menu-burger__header:before{
+  top: 9px;
+}
+.menu-burger__header.open-menu {
+  background:#000000; 
+}
+.menu-burger__header.open-menu span {
+  opacity:0; 
+  transition: 0.5s; 
+}
+.menu-burger__header.open-menu:before {
+  transform: rotate(38deg);
+  top: 16px;
+  transition: 0.4s;
+  background: #ffffff;
+
+}
+.menu-burger__header.open-menu:after {
+  transform: rotate(-38deg);
+  bottom: 16px;
+  transition: 0.4s;
+  background: #ffffff;
+
+}
 .contact__icon {
   min-width: 40px;
 }
@@ -278,6 +344,20 @@ address {
   border: none;
   height: 48px;
   width: 48px;
+  @include mobile {
+    display: none;
+  }
+}
+.container__hero {
+  margin: 0 auto;
+  max-width: 1920%;
+  background: url(./IMG/img-bg.png) no-repeat 900px;
+  @include tablets {
+    background: url(./IMG/img-bg.png) no-repeat 500px;
+  }
+  @include mobile {
+    background: none;
+  }
 }
 .hero {
   display: flex;
@@ -288,25 +368,18 @@ address {
   backface-visibility: visible;
   @include mobile {
     flex-direction: column-reverse;
-    width: 320px;
+    align-items: center;
   }
 }
-.container__hero {
-  margin: 0 auto;
-  width: 100%;
-  background: url(./IMG/img-bg.png) no-repeat 900px;
-  @include tablets {
-    background: url(./IMG/img-bg.png) no-repeat 500px;
-  }
-  @include mobile {
-    background: none;
-  }
-}
+
 .hero__content {
   width: 50%;
   position: relative;
   @include mobile {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    align-items: center;
   }
 }
 
@@ -342,6 +415,10 @@ address {
 }
 .hero__img {
   position: relative;
+  align-items: center;
+  @include mobile{
+    background: url(./IMG/backmobile.jpg);
+  }
 
   &::before {
     content: "";
@@ -372,6 +449,15 @@ address {
   animation-duration: 30s;
   animation-iteration-count: infinite;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @include mobile {
+    display: none;
+  }
+}
+.pizza__main--mobile{ 
+    display: none;
+  @include mobile {
+    display: block;
+  }
 }
 .event {
   display: flex;
@@ -381,8 +467,29 @@ address {
   display: flex;
   justify-content: space-around;
   @include mobile {
-    flex-direction: column;
+    display: none;
   }
+ 
+}
+.event__list--slider, 
+.bx-wrapper{
+  display: none;
+  @include mobile {
+    display: block;
+  }
+
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  
+  display: block;
+  width: 12px;
+  height: 12px;
+  
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #E52D2D;
 }
 .event__item {
   display: flex;
@@ -425,7 +532,10 @@ address {
   margin-bottom: 55px;
 }
 .pizza-types__list {
+  background-color: #ffffff;
   display: flex;
+  width: 560px;
+  justify-content: space-between;
   margin-bottom: 40px;
   font-family: $font-family_3;
   font-style: normal;
@@ -435,36 +545,61 @@ address {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: $color_3;
+  @include mobile {
+    display: none;
+  }
 }
-
+.pizza-types__list--mobile{
+  display: none;
+  @include mobile {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    width: 232px;
+  }
+}
 .pizza-types__item {
-  margin-right: 40px;
+  color: #000000;
+  // margin-right: 40px;
   transition: 400ms;
   position: relative;
 
   &:hover{
     transition: 400ms;
-    color: $color_4;
-    :before {
-      top: -30px;
-      transition: 700ms;
-    }
-  }
-  &:before {
-    content: "";
-    background: url(./IMG/Frame\ 14.jpg) no-repeat;
-    position: absolute;
-    left: 35%;
-    width: 24px;
-    height: 24px;
-    z-index: -5;
-    top: 0px;
-    
-  }
-  &:last-child {
-    margin-right: 0px;
-  }
+    color: $color_4;  
+   
+    .all{
+    top: -30px;
+    transition: 400ms;
+  } 
+  .link__red{
+    transition: 400ms;
+    color: $color_4;  
+  }  
 }
+}
+.all{
+  position: absolute;
+  z-index: -5;
+  top: 0px;
+  left: 20%;
+  transition: 400ms;
+ 
+}
+.pepper, 
+.meat,
+.cheese,
+.vegan{
+
+  top: 0px;
+  left: 40%;
+  transition: 400ms;
+ 
+}
+.pepper{
+  left: 35%;
+}
+
 .pizza-menu__list {
   display: flex;
   align-items: center;
@@ -480,11 +615,22 @@ address {
   box-shadow: 0px 2px 5px rgba(165, 169, 176, 0.3);
   border-radius: 5px;
   transition: 600ms;
+  @include mobile {    
+      margin: 32px;
+      flex-direction: row;
+      min-width: 288px;
+    
+  }
 
   &:nth-child(4n) {
     margin: 0 0px 32px 0;
     @include tablets {
       margin: 0 32px 32px 0;
+    }
+    @include mobile {
+      &:nth-child(3n) {
+        margin: 32px;
+      }
     }
   }
   @include tablets {
@@ -492,29 +638,38 @@ address {
       margin: 0 0px 32px 0;
     }
   }
-
-  &:hover {
-    .type__icon {
-      opacity: 1;
-      transition: 400ms;
+  @include mobile() {
+    &:nth-child(3n) {
+      margin: 32px;
     }
+  }
+
+  &:hover {     
+    
     .pizza-menu__title {
       color: $color_4;
       transition: 0, 3s;
-    }
-    margin-top: -10px;
-    transition: 600ms;
+    }.type__icon {
+      visibility: visible;   
+   opacity: 1;
+
+    } 
+    
   }
   @include tablets {
     max-width: 226px;
   }
 }
+.pizza__item--img-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .type__icon {
-  text-align: left;
-  padding: 12px;
-  opacity: 0;
-  z-index: 5;
-  transition: 400ms;
+align-self: baseline; 
+ padding: 12px;
+visibility: hidden; 
+opacity: 0;
 }
 .pizza-menu__title {
   font-family: $font-family_3;
@@ -536,6 +691,11 @@ address {
   color: $color_5;
   margin-bottom: 8px;
   padding: 0 20px;
+  @include mobile {
+    text-align: left;
+    padding: 0;
+
+  }
 }
 .pizza-size__title {
   font-family: $font-family_4;
@@ -585,9 +745,23 @@ address {
   max-width: 240px;
   height: 52px;
   margin: 0 auto 40px;
+
   @include tablets {
     max-width: 196px;
+    margin: 0 auto 40px
   }
+  @include mobile {
+    display: none;
+  }
+}
+.pizza__item--desc-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+@include mobile {
+  align-items: baseline;
+  text-align: left;
+}
 }
 .container__1920 {
   max-width: 1920;
@@ -702,7 +876,9 @@ address {
   @include mobile {
     width: 80px;
     margin: 16px;
-
+    &:nth-child(2) {    
+      margin:16px;
+    }
   }
   
 }
@@ -763,6 +939,7 @@ address {
   min-height: 120px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   @include mobile {
     flex-direction: column;

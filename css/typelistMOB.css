@@ -1,0 +1,11 @@
+.pizza-types__list--mobile {
+  display: none;
+}
+@media screen and (max-width: 481px) {
+  .pizza-types__list--mobile {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
