@@ -753,23 +753,12 @@ color: #A8B0BC;
   position: absolute;
   z-index: -5;
   top: 0px;
-  left: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   transition: 400ms;
  
 }
-.pepper, 
-.meat,
-.cheese,
-.vegan{
 
-  top: 0px;
-  left: 40%;
-  transition: 400ms;
- 
-}
-.pepper{
-  left: 35%;
-}
 
 .pizza-menu__list {
   display: flex;
