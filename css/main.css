@@ -327,7 +327,9 @@ address {
   }
 }
 
-.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before {
+.menu-burger__header span,
+.menu-burger__header:after,
+.menu-burger__header:before {
   height: 3px;
   width: 24px;
   position: absolute;
@@ -339,7 +341,8 @@ address {
   width: 19px;
 }
 
-.menu-burger__header:after, .menu-burger__header:before {
+.menu-burger__header:after,
+.menu-burger__header:before {
   content: "";
 }
 
@@ -446,7 +449,7 @@ address {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: absolute;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media screen and (max-width: 835px) {
   .lang-switch--mobile {
@@ -561,7 +564,7 @@ address {
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #A8B0BC;
+  color: #a8b0bc;
 }
 
 .phone__desc--burger {
@@ -570,7 +573,7 @@ address {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #A8B0BC;
+  color: #a8b0bc;
 }
 
 .contact__icon {
@@ -862,7 +865,7 @@ address {
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-  background: #E52D2D;
+  background: #e52d2d;
 }
 
 .event__item {
@@ -1072,6 +1075,8 @@ address {
 .pizza-menu__item:hover .type__icon {
   visibility: visible;
   opacity: 1;
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 @media screen and (max-width: 835px) {
   .pizza-menu__item {
@@ -1098,6 +1103,8 @@ address {
   padding: 12px;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 .pizza-menu__title {
@@ -1181,10 +1188,20 @@ address {
   }
 }
 
+.tabs__pane {
+  display: none;
+}
+
+.tabs__pane_show {
+  display: block;
+  max-width: 240px;
+  max-height: 240px;
+}
+
 .pizza-size__item {
   text-align: center;
   width: 28%;
-  background-color: #ffffff;
+  background: #eff0f1;
   margin: 3px;
   border-radius: 3px;
   display: -webkit-box;
@@ -1203,7 +1220,24 @@ address {
   line-height: 18px;
   text-align: center;
   color: #000000;
-  background-color: #ffffff;
+  background: inherit;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.pizza-size__btn--active {
+  background: #ffffff;
+  cursor: default;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  width: 50px;
+  height: 28px;
+  border-radius: 3px;
+}
+
+.pizza-size__btn:not(.pizza-size__btn--active):hover,
+.pizza-size__btn:not(.pizza-size__btn--active):focus {
+  background: #eff0f1;
 }
 
 .pizza-price__title {
