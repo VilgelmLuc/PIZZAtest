@@ -1194,8 +1194,18 @@ address {
 
 .tabs__pane_show {
   display: block;
-  max-width: 240px;
-  max-height: 240px;
+}
+@media screen and (max-width: 835px) {
+  .tabs__pane_show {
+    min-width: 200px;
+    min-height: 200px;
+  }
+}
+@media screen and (max-width: 835px) {
+  .tabs__pane_show {
+    min-width: 80px;
+    min-height: 80px;
+  }
 }
 
 .pizza-size__item {

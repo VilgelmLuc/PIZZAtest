@@ -877,15 +877,19 @@ address {
   }
 }
 .tabs__pane {
-  display: none;
-
-
+display: none;
 }
 
 .tabs__pane_show {
-  display: block;
-  max-width: 240px;
-  max-height: 240px;
+display: block; 
+ @include tablets{
+    min-width: 200px;
+    min-height: 200px;
+  }
+  @include tablets{
+    min-width: 80px;
+    min-height: 80px;
+  }
 }
 .pizza-size__item {
   text-align: center;
