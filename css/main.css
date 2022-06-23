@@ -420,7 +420,7 @@ address {
           box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.37);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  right: -120%;
+  right: -150%;
 }
 @media screen and (max-width: 835px) {
   .navbar__mobile {
@@ -534,7 +534,7 @@ address {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin-top: 50%;
+  margin-top: 40%;
   margin-bottom: 40px;
 }
 
