@@ -64,11 +64,11 @@ body {
   position: relative;
   color: $color_1;
 
-  .fixed-pade {
+  
+}
+.fixed-pade {
     overflow: hidden;
   }
-}
-
 .wrapper {
   width: 100%;
   background: url(./IMG/img-bg.png) no-repeat 1700px 53px;
@@ -458,6 +458,33 @@ address {
 .contact__icon {
   min-width: 40px;
 }
+.basket__icon {
+  min-width: 40px;
+  position: relative;
+  &::after{
+    content: "3";
+    text-align: center;
+    background: #e52d2d;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    /* identical to box height, or 159% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+        border-radius: 50%;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+position: absolute;
+top: -10%;
+left: 120%;
+transform: translateX(-85%) translateY(-25%);
+  }
+}
 .contact__desc--header {
   margin-left: 12px;
   @include tablets {
@@ -814,7 +841,7 @@ address {
 }
 .type__icon {
   align-self: baseline;
-  padding: 12px;
+  padding: 12px 0 0 12px;
   visibility: hidden;
   opacity: 0;
   transition: 400ms;

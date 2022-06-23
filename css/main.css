@@ -62,7 +62,8 @@ body {
   position: relative;
   color: black;
 }
-body .fixed-pade {
+
+.fixed-pade {
   overflow: hidden;
 }
 
@@ -580,6 +581,33 @@ address {
 
 .contact__icon {
   min-width: 40px;
+}
+
+.basket__icon {
+  min-width: 40px;
+  position: relative;
+}
+.basket__icon::after {
+  content: "3";
+  text-align: center;
+  background: #e52d2d;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 18px;
+  /* identical to box height, or 159% */
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 50%;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10%;
+  left: 120%;
+  -webkit-transform: translateX(-85%) translateY(-25%);
+          transform: translateX(-85%) translateY(-25%);
 }
 
 .contact__desc--header {
@@ -1102,7 +1130,7 @@ address {
 .type__icon {
   -ms-flex-item-align: baseline;
       align-self: baseline;
-  padding: 12px;
+  padding: 12px 0 0 12px;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: 400ms;
