@@ -63,6 +63,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   color: $color_1;
+
   .fixed-pade {
     overflow: hidden;
   }
@@ -321,7 +322,8 @@ address {
   flex-direction: column;
   position: absolute;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
+  display: none;
   top: 5px;
   background: #313945;
   box-shadow: #ccc;
@@ -332,10 +334,10 @@ address {
   right: -150%;
   @include tablets {
     z-index: 20;
-    display: block;
   }
   @include mobile {
     width: 100%;
+
   }
 }
 .lang-switch--mobile {
@@ -364,6 +366,9 @@ address {
   right: 0%;
   color: #ffffff;
   z-index: 20;
+  display: block;
+  visibility: visible;
+
 }
 .navbar__menu--burger {
   width: 200px;

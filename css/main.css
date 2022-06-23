@@ -410,6 +410,7 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
   top: 5px;
   background: #313945;
   -webkit-box-shadow: #ccc;
@@ -425,7 +426,6 @@ address {
 @media screen and (max-width: 835px) {
   .navbar__mobile {
     z-index: 20;
-    display: block;
   }
 }
 @media screen and (max-width: 481px) {
@@ -466,6 +466,8 @@ address {
   right: 0%;
   color: #ffffff;
   z-index: 20;
+  display: block;
+  visibility: visible;
 }
 
 .navbar__menu--burger {
