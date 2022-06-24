@@ -20,6 +20,33 @@
     <title>piZZa</title>
   </head>
   <body>
+    <div class="popup">
+      <div class="popup__container">
+        <div class="popup__title"><h2>Ваш заказ</h2>
+        </div>
+        <ul class="basket__list">
+          <li class="busket__item">
+            <div class="basket__item--img"></div>
+            <div class="basket__item--desc">
+              <h4 class="basket__item--title"></h4>
+              <p class="basket__item--subtitle"></p>
+            </div>
+            <div class="basket__item--volume">
+              <button class="volume__minus"></button>
+              <div class="volume__total"></div>
+              <button class="volume__plus"></button>
+            </div>
+            <p class="basket__item--price"></p>
+            <button class="basket__item--close"></button>
+          </li>
+        </ul>
+        <div class="basket__total">
+          <p class="basket__total--title"></p>
+          <p class="basket__total--price"></p>
+        </div>
+        <form action=""></form>
+      </div>
+    </div>
       
     <div class="container">
       <header>
@@ -196,14 +223,16 @@
         <section class="choose-pizza">
           <h2 class=" choose-pizza__title"><a name="choose-pizza"> Выберите пиццу</a></h2>
           <ul class="pizza-types__list">
-            <li class="pizza-types__item "><a class="link__red" href=""> <span  class="all"> <img src="./css/IMG/Frame 14.jpg" alt=""></span> все</a></li>
+            <li class="pizza-types__item ">  
+              <a class="link__red" href=""> <span  class="all"> <img src="./css/IMG/Frame14.jpg" alt=""></span> все</a>
+            </li>
             <li class="pizza-types__item "><a class="link__red" href=""> <span  class="all pepper"> <img src="./css/IMG/Frame 13.jpg" alt=""></span>острые</a></li>
             <li class="pizza-types__item "><a class="link__red" href=""> <span  class="all meat"> <img src="./css/IMG/Frame 16.jpg" alt=""></span>мясные</a></li>
             <li class="pizza-types__item "><a class="link__red" href=""> <span  class="all cheese"> <img src="./css/IMG/Frame 12.jpg" alt=""></span>сырные</a></li>
             <li class="pizza-types__item "><a class="link__red" href=""> <span  class="all vegan"> <img src="./css/IMG/Frame 15.jpg" alt=""></span>веганские</a></li>
           </ul>
           <ul class="pizza-types__list--mobile">
-            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=""> <img src="./css/IMG/Frame 14.jpg" alt=""></span></a></li>
+            <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=""> <img src="./css/IMG/Frame14.jpg" alt=""></span></a></li>
             <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=""> <img src="./css/IMG/Frame 13.jpg" alt=""></span></a></li>
             <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=" "> <img src="./css/IMG/Frame 16.jpg" alt=""></span></a></li>
             <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=" "> <img src="./css/IMG/Frame 12.jpg" alt=""></span></a></li>
@@ -218,8 +247,8 @@
             </div>
               <div class="pizza__frames">
                 <div class="pizza__borderL">
-                    <div class="pizza__borderM">
-              <img class="pizza__size--20" src="./css/IMG/ital120.jpg" alt="итальянская" />
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
             </div>
             </div>
               </div>
@@ -247,12 +276,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -277,12 +311,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -307,12 +346,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -337,12 +381,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -367,12 +416,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -397,12 +451,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -427,12 +486,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -457,12 +521,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -487,12 +556,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -517,12 +591,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -547,12 +626,17 @@
             </li>
             <li class="pizza-menu__item">
               <div class="pizza__item--img-content">
+                <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
-              <span class="type__icon"><img src="#" alt="" /></span>
-
-              <img class="tabs__pane tabs__pane_show" src="./css/IMG/ital20.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital30.jpg" alt="итальянская" />
-              <img class="tabs__pane " src="./css/IMG/ital40.jpg" alt="итальянская" />
+              <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+            </div>
+              <div class="pizza__frames">
+                <div class="pizza__borderL">
+                    <div class="pizza__borderM pizza__borderM--default">
+              <img class="pizza__size--30" src="./css/IMG/ital120.jpg" alt="итальянская" />
+            </div>
+            </div>
+              </div>
             </div>
             <div class="pizza__item--desc-content">
               <h4 class="pizza-menu__title">Итальянская</h4>
@@ -576,10 +660,6 @@
             </div>
             </li>
             
-
-            
-
-   
           </ul>
         </section>     </div>
 <div class=" container__1920">

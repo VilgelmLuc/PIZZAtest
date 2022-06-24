@@ -160,6 +160,7 @@ h4 {
     line-height: 24px;
   }
 }
+input {outline:none;}
 * {
   box-sizing: border-box;
 }
@@ -540,7 +541,7 @@ transform: translateX(-85%) translateY(-25%);
 }
 .container__hero {
   margin: 0 auto;
-  max-width: 1920%;
+  max-width: 1920px;
   background: url(./IMG/img-bg.png) no-repeat 900px;
   @include tablets {
     background: url(./IMG/img-bg.png) no-repeat 500px;
@@ -581,6 +582,9 @@ transform: translateX(-85%) translateY(-25%);
   line-height: 36px;
   color: $color_3;
   margin-bottom: 40px;
+  @include tablets{
+    margin-bottom: 24px;
+  }
 }
 .btn {
   width: 304px;
@@ -609,6 +613,10 @@ transform: translateX(-85%) translateY(-25%);
 .hero__img {
   position: relative;
   align-items: center;
+  @include tablets{
+    width: 315px;
+    height: 315px;
+  }
   @include mobile {
     background: url(./IMG/backmobile.jpg);
   }
@@ -628,8 +636,8 @@ transform: translateX(-85%) translateY(-25%);
     @include tablets {
       width: 152px;
       height: 152px;
-      top: 285px;
-      left: 20px;
+      top: 170px;
+    left: -34px;
     }
     @include mobile {
       justify-content: space-between;
@@ -718,7 +726,7 @@ transform: translateX(-85%) translateY(-25%);
   margin-bottom: 100px;
 }
 .choose-pizza__title {
-  margin-bottom: 55px;
+  margin-bottom:48px;
 }
 .pizza-types__list {
   background-color: #ffffff;
@@ -769,12 +777,28 @@ transform: translateX(-85%) translateY(-25%);
   
 }
 .all {
-  position: absolute;
+   position: absolute;
   z-index: -5;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
   transition: 400ms;
+}
+.radio {
+  -webkit-user-select: none;
+  user-select: none;
+ 
+}
+.radio__elem:checked~.link__red, .pizza-menu__list{
+     transition: 400ms;
+    color: $color_4;
+    
+}
+.radio__elem:checked~.all{
+
+   top: -30px;
+   transition: 400ms;
+ 
 }
 
 .pizza-menu__list {
@@ -959,7 +983,7 @@ display: block;
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  border: 1px dashed #DCDFE2;
+  border: 1px dashed red;
   margin:  auto;
   display: flex;
   align-items: center;
@@ -975,10 +999,11 @@ display: block;
 
 
 }
+
 .pizza__borderM{
   border-radius: 50%;
-  width: 164px;
-  height: 164px;
+  width: 183px;
+  height: 183px;
   border: 1px dashed #DCDFE2;
   margin:  auto;
   display: flex;
@@ -996,10 +1021,13 @@ display: block;
   }
 
 }
+.pizza__borderM--default{
+border: none;
+}
 .pizza__size--20{
   width: 154px;
   height: 154px;
-  overflow: hidden;
+  // overflow: hidden;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -1017,7 +1045,6 @@ transform: translateX(-50%) translateY(-50%);
 .pizza__size--30{
   width: 184px;
   height: 184px;
-  overflow: hidden;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -1036,7 +1063,6 @@ transform: translateX(-50%) translateY(-50%);
   width: 212px;
   height: 212px;
   margin:  auto; 
-  overflow: hidden;
 position: absolute;
 top: 50%;
 left: 50%;
