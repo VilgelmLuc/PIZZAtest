@@ -34,6 +34,10 @@ $mobile: 481px;
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
 @import "./typelistMOB";
+@import "./popup";
+
+
+
 @keyframes show {
   0% {
     opacity: 0;
@@ -186,7 +190,7 @@ footer {
   background-color: $background-color_5;
 }
 header {
-margin-top: 10px;  
+// padding-top: 10px;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,9 +203,7 @@ margin-top: 10px;
     justify-content: space-between;
   }
 }
-.popup{
-  display: none;
-}
+
 .logo {
   width: 182px;
 
@@ -298,20 +300,20 @@ address {
   // padding-right: 100px;
 }
 .menu-burger__header.open-menu:before {
-  transform: rotate(580deg);
-  top: 0px;
+  transform: rotate(495deg);
+  top: 9px;
   transition: 0.4s;
   background: #ffffff;
   z-index: 20;
-  padding-right: 24px;
 }
 .menu-burger__header.open-menu:after {
-  transform: rotate(-580deg);
-  bottom: 36px;
+  transform: rotate(-495deg);
+  bottom: 28px;
   transition: 0.4s;
   background: #ffffff;
   z-index: 20;
-  padding-right: 24px;
+  width: 24px;
+
 }
 
 .logo__mobile {

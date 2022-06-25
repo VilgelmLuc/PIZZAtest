@@ -50,28 +50,71 @@
           </button>
         </nav>
     <div class="popup">
-      <div class="popup__container">
+      <div class="popup__container--content">
         <div class="popup__title"><h2>Ваш заказ</h2>
         </div>
         <ul class="basket__list">
-          <li class="busket__item">
-            <div class="basket__item--img"></div>
-            <div class="basket__item--desc">
-              <h4 class="basket__item--title"></h4>
-              <p class="basket__item--subtitle"></p>
+          <li class="basket__item">
+            <div class="basket__item--content">
+            <div class="basket__item--img">
+              <span class="basket__item--img-icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+              <span class="basket__item--img-pizza"><img src="./css/IMG/ital120.jpg" alt="" /></span>
             </div>
+            <div class="basket__item--desc">
+              <h4 class="basket__item--title">Итальянская</h4>
+              <p class="basket__item--subtitle">30 см</p>
+            </div>
+          </div>
             <div class="basket__item--volume">
               <button class="volume__minus"></button>
-              <div class="volume__total"></div>
+              <div class="volume__total"><p class="volume__total--desc">1</p></div>
               <button class="volume__plus"></button>
             </div>
-            <p class="basket__item--price"></p>
+            <p class="basket__item--price">699 руб</p>
+            <button class="basket__item--close"></button>
+          </li>
+          <li class="basket__item">
+            <div class="basket__item--content">
+            <div class="basket__item--img">
+              <span class="basket__item--img-icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+              <span class="basket__item--img-pizza"><img src="./css/IMG/ital120.jpg" alt="" /></span>
+            </div>
+            <div class="basket__item--desc">
+              <h4 class="basket__item--title">Итальянская</h4>
+              <p class="basket__item--subtitle">30 см</p>
+            </div>
+          </div>
+            <div class="basket__item--volume">
+              <button class="volume__minus"></button>
+              <div class="volume__total"><p class="volume__total--desc">1</p></div>
+              <button class="volume__plus"></button>
+            </div>
+            <p class="basket__item--price">699 руб</p>
+            <button class="basket__item--close"></button>
+          </li>
+          <li class="basket__item">
+            <div class="basket__item--content">
+            <div class="basket__item--img">
+              <span class="basket__item--img-icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
+              <span class="basket__item--img-pizza"><img src="./css/IMG/ital120.jpg" alt="" /></span>
+            </div>
+            <div class="basket__item--desc">
+              <h4 class="basket__item--title">Итальянская</h4>
+              <p class="basket__item--subtitle">30 см</p>
+            </div>
+          </div>
+            <div class="basket__item--volume">
+              <button class="volume__minus"></button>
+              <div class="volume__total"><p class="volume__total--desc">1</p></div>
+              <button class="volume__plus"></button>
+            </div>
+            <p class="basket__item--price">699 руб</p>
             <button class="basket__item--close"></button>
           </li>
         </ul>
         <div class="basket__total">
-          <p class="basket__total--title"></p>
-          <p class="basket__total--price"></p>
+          <p class="basket__total--title">Сумма заказа:</p>
+          <p class="basket__total--price">1887 руб </p>
         </div>
         <form action=""></form>
       </div>
@@ -776,57 +819,7 @@
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="./scripts/slider.js"></script>
   <script src="./scripts/menu.js"></script> 
-  <script>
-  class ItcTabs {
-    constructor(target, config) {
-      const defaultConfig = {};
-      this._config = Object.assign(defaultConfig, config);
-      this._elTabs = typeof target === 'string' ? document.querySelector(target) : target;
-      this._elButtons = this._elTabs.querySelectorAll('.pizza-size__btn');
-      this._elPanes = this._elTabs.querySelectorAll('.tabs__pane');
-      this._eventShow = new Event('tab.itc.change');
-      this._init();
-      this._events();
-    }
-    _init() {
-      this._elTabs.setAttribute('role', 'tablist');
-      this._elButtons.forEach((el, index) => {
-        el.dataset.index = index;
-        el.setAttribute('role', 'tab');
-        this._elPanes[index].setAttribute('role', 'tabpanel');
-      });
-    }
-    show(elLinkTarget) {
-      const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
-      const elLinkActive = this._elTabs.querySelector('.pizza-size__btn--active');
-      const elPaneShow = this._elTabs.querySelector('.tabs__pane_show');
-      if (elLinkTarget === elLinkActive) {
-        return;
-      }
-      elLinkActive ? elLinkActive.classList.remove('pizza-size__btn--active') : null;
-      elPaneShow ? elPaneShow.classList.remove('tabs__pane_show') : null;
-      elLinkTarget.classList.add('pizza-size__btn--active');
-      elPaneTarget.classList.add('tabs__pane_show');
-      this._elTabs.dispatchEvent(this._eventShow);
-      elLinkTarget.focus();
-    }
-    showByIndex(index) {
-      const elLinkTarget = this._elButtons[index];
-      elLinkTarget ? this.show(elLinkTarget) : null;
-    };
-    _events() {
-      this._elTabs.addEventListener('click', (e) => {
-        const target = e.target.closest('.pizza-size__btn');
-        if (target) {
-          e.preventDefault();
-          this.show(target);
-        }
-      });
-    }
-  }
-
-  // инициализация .tabs как табов
-  new ItcTabs('.pizza-menu__item');  </script> 
+  
 
 
   </body>

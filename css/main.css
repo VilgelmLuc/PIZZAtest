@@ -11,6 +11,247 @@
   }
 }
 
+.popup {
+  max-width: 704px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 1000px;
+}
+
+.popup__container--content {
+  max-width: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.popup__title {
+  height: 109px;
+  border-bottom: 1px solid #DCDFE2;
+}
+
+.basket__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.basket__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 9px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #DCDFE2;
+  height: 109px;
+}
+
+.basket__item--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.basket__item--img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.basket__item--desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.basket__item--volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.volume__minus {
+  position: relative;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  opacity: 0, 5;
+  background: #c5cbd5;
+  border: none;
+}
+.volume__minus::after {
+  content: "";
+  background-color: #FFFFFF;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  z-index: 5;
+}
+
+.volume__total {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 40px;
+  border: 1px solid #c5cbd5;
+  border-radius: 5px;
+  margin: 0 8px;
+}
+
+.volume__total--desc {
+  text-align: center;
+  margin: 11px 18px;
+}
+
+.volume__plus {
+  position: relative;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  opacity: 0, 5;
+  background: #c5cbd5;
+  border: none;
+}
+.volume__plus::after {
+  content: "";
+  background-color: #FFFFFF;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  z-index: 5;
+}
+.volume__plus::before {
+  content: "";
+  background-color: #FFFFFF;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  z-index: 5;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.basket__item--price {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: right;
+  color: #000000;
+}
+
+.basket__item--close {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: relative;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: none;
+}
+.basket__item--close::after {
+  content: "";
+  background-color: #A9A9A9;
+  width: 9px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.basket__item--close::before {
+  content: "";
+  background-color: #A9A9A9;
+  width: 9px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.basket__total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.basket__total--title {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.basket__total--price {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 44px;
+  /* identical to box height */
+  text-align: right;
+}
+
 @-webkit-keyframes show {
   0% {
     opacity: 0;
@@ -212,7 +453,6 @@ footer {
 }
 
 header {
-  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,10 +477,6 @@ header {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-}
-
-.popup {
-  display: none;
 }
 
 .logo {
@@ -372,25 +608,24 @@ address {
 }
 
 .menu-burger__header.open-menu:before {
-  -webkit-transform: rotate(580deg);
-          transform: rotate(580deg);
-  top: 0px;
+  -webkit-transform: rotate(495deg);
+          transform: rotate(495deg);
+  top: 9px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   background: #ffffff;
   z-index: 20;
-  padding-right: 24px;
 }
 
 .menu-burger__header.open-menu:after {
-  -webkit-transform: rotate(-580deg);
-          transform: rotate(-580deg);
-  bottom: 36px;
+  -webkit-transform: rotate(-495deg);
+          transform: rotate(-495deg);
+  bottom: 28px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   background: #ffffff;
   z-index: 20;
-  padding-right: 24px;
+  width: 24px;
 }
 
 .logo__mobile {
