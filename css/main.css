@@ -212,6 +212,7 @@ footer {
 }
 
 header {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,7 +222,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 176px;
+  height: 90px;
 }
 @media screen and (max-width: 835px) {
   header {
@@ -236,6 +237,10 @@ header {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+.popup {
+  display: none;
 }
 
 .logo {
@@ -328,7 +333,6 @@ address {
         -ms-flex-align: center;
             align-items: center;
     z-index: 20;
-    padding-right: 60px;
   }
 }
 
@@ -365,7 +369,6 @@ address {
   transition: 0.5s;
   z-index: 20;
   margin-left: 0px;
-  padding-right: 100px;
 }
 
 .menu-burger__header.open-menu:before {
@@ -541,7 +544,7 @@ address {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin-top: 40%;
+  margin-top: 10%;
   margin-bottom: 40px;
 }
 
