@@ -328,7 +328,7 @@ address {
   top: 5px;
   background: #313945;
   box-shadow: #ccc;
-  height: 500%;
+  height: 100%;
   width: 320px;
   box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.37);
   transition: all 0.4s ease;
@@ -461,30 +461,29 @@ address {
 }
 .basket__icon {
   min-width: 40px;
-  position: relative;
-  &::after{
-    content: "3";
-    text-align: center;
-    background: #e52d2d;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 18px;
-    /* identical to box height, or 159% */
-    
-    text-align: center;
-    
-    color: #FFFFFF;
-        border-radius: 50%;
-    z-index: 10;
-    width: 20px;
-    height: 20px;
+  position: relative; 
+}
+.basket__icon--value{
+  text-align: center;
+  background: #e52d2d;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 18px;
+  /* identical to box height, or 159% */
+  
+  text-align: center;
+  
+  color: #FFFFFF;
+      border-radius: 50%;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
 position: absolute;
 top: -10%;
 left: 120%;
 transform: translateX(-85%) translateY(-25%);
-  }
 }
 .contact__desc--header {
   margin-left: 12px;
@@ -618,6 +617,8 @@ transform: translateX(-85%) translateY(-25%);
     height: 315px;
   }
   @include mobile {
+    width: auto;
+    height: auto;
     background: url(./IMG/backmobile.jpg);
   }
 
@@ -628,8 +629,9 @@ transform: translateX(-85%) translateY(-25%);
     width: 303px;
     height: 303px;
     position: absolute;
-    top: 320px;
-    left: -70px;
+    top: 50%;
+    right: 70%;
+    transform: translateX(10%) translateY(10%);
     @include mobile {
       display: none;
     }
