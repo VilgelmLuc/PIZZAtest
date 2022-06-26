@@ -11,12 +11,68 @@
   }
 }
 
+.popup__fade {
+  display: none;
+}
+
+.popup__fade:before {
+  content: "";
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 9999;
+}
+
 .popup {
-  max-width: 704px;
+  width: 704px;
   background: #ffffff;
   border-radius: 5px;
   margin: 0 auto;
-  height: 1000px;
+  position: fixed;
+  padding: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 99999;
+  opacity: 1;
+}
+
+.popup__close {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  top: 30px;
+  right: 30px;
+}
+.popup__close::after {
+  content: "";
+  background-color: #000000;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.popup__close::before {
+  content: "";
+  background-color: #000000;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .popup__container--content {
@@ -303,7 +359,7 @@
   resize: none;
 }
 .form__input:focus {
-  border-color: #8FC9FF;
+  border-color: #8fc9ff;
   outline: none;
 }
 .form__input:hover {
@@ -401,7 +457,7 @@
   font-size: 12px;
   line-height: 18px;
   /* identical to box height, or 150% */
-  color: #848A9A;
+  color: #848a9a;
 }
 
 @-webkit-keyframes show {

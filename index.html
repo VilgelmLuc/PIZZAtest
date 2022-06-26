@@ -49,9 +49,11 @@
             <p>english</p>
           </button>
         </nav>
+        <div class="popup__fade">
     <div class="popup">
       <div class="popup__container--content">
         <div class="popup__title"><h2>Ваш заказ</h2>
+          <button class="popup__close"></button>
         </div>
         <ul class="basket__list">
           <li class="basket__item">
@@ -117,7 +119,7 @@
           <p class="basket__total--price">1887 руб </p>
         </div>
         <form class="form" action="">
-          
+
           <h4 class="form__title">Контакты</h4>
                    
                         <div class="form__col">
@@ -126,7 +128,8 @@
                                     <input type="text" class="form__input"  pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Ваше имя">
                                 </label>
                                 <label class="form__block">
-                                    <input type="text" class="form__input"  pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Телефон">
+                                    <input type="tel" class="form__input"   type="tel"
+                                    pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон">
                                 </label>
                             </div>
                             <div class="form__row">
@@ -195,10 +198,11 @@
         
         
         <div class="basket">
-          <span class="basket__icon"
-            ><img src="./css/IMG/Cart.svg" alt="иконка корзины"/>
+          <a href="" class="popup__open basket__icon">
+          <img src="./css/IMG/Cart.svg" alt="иконка корзины"/>
+            
           <p class="basket__icon--value">3</p>
-          </span>
+          </a>
           <div class="basket__desc">
             <p class="phone__title">
               <a class="" href="#" title="Корзина">Ваш заказ</a>
@@ -857,8 +861,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
+
   <script src="./scripts/slider.js"></script>
   <script src="./scripts/menu.js"></script> 
+  <script src="./scripts/popup.js"></script> 
+
+  
   
 
 
