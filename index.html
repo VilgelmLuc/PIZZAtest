@@ -116,7 +116,47 @@
           <p class="basket__total--title">Сумма заказа:</p>
           <p class="basket__total--price">1887 руб </p>
         </div>
-        <form action=""></form>
+        <form class="form" action="">
+          
+          <h4 class="form__title">Контакты</h4>
+                   
+                        <div class="form__col">
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <input type="text" class="form__input"  pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Ваше имя">
+                                </label>
+                                <label class="form__block">
+                                    <input type="text" class="form__input"  pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Телефон">
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <input type="text" class="form__input" placeholder="Адрес доставки">
+                                </label>
+                            </div>
+                            <h4 class="form__title">Способ оплаты</h4>
+
+                            <div class="form__controls">
+                              <label class="radio">
+                                  <input type="radio" name="option" class="radio__elem">
+                                  <div class="radio__visible"></div>
+                                  <div class="radio__title">Оплата наличными или картой курьеру</div>
+                              </label>
+                              <label class="radio">
+                                  <input type="radio" name="option" class="radio__elem">
+                                  <div class="radio__visible"></div>
+                                  <div class="radio__title">Оплата картой онлайн на сайте</div>
+                              </label>
+                              <div class="form__btns">
+                                <input type="submit" class="btn btn__theme--red" value="оформить заказ">
+                               
+                            </div>
+                            </div>
+                            <p class="agreement">Нажимая кнопку «Оформить заказ» вы соглашаетесь с политикой конфиденциальности</p>
+
+                          </div>
+                        </div>
+        </form>
       </div>
     </div>
       
