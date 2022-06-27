@@ -1724,7 +1724,7 @@ address {
 }
 
 .type__icon {
-  width: 24px;
+  min-width: 24px;
   -ms-flex-item-align: baseline;
       align-self: baseline;
   padding: 12px 0 0 12px;
@@ -1735,6 +1735,7 @@ address {
 }
 @media screen and (max-width: 481px) {
   .type__icon {
+    max-width: 12px;
     padding: 8px 0 0 8px;
   }
 }
@@ -1853,7 +1854,6 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
 }
 @media screen and (max-width: 835px) {
   .pizza__frames {
@@ -1865,7 +1865,7 @@ address {
 @media screen and (max-width: 481px) {
   .pizza__frames {
     margin: 0;
-    margin-top: 13px;
+    margin-top: 16px;
     width: 80px;
     height: 80px;
   }
@@ -1986,8 +1986,6 @@ address {
 .pizza__size--30 {
   width: 184px;
   height: 184px;
-  background: url(./IMG/ital120.jpg) no-repeat center center;
-  background-size: contain;
   position: relative;
 }
 @media screen and (max-width: 835px) {
