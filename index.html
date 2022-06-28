@@ -316,11 +316,11 @@
         <section class="choose-pizza">
           <h2 class=" choose-pizza__title"><a name="choose-pizza"> Выберите пиццу</a></h2>
           <ul class="pizza-types__list">
-            <li class="pizza-types__item "><button class="link__red" href="">все</button></li>
-            <li class="pizza-types__item "><button class="link__red link__red--pepper" >острые</button></li>
-            <li class="pizza-types__item "><button class="link__red link__red--meat" >мясные</button></li>
-            <li class="pizza-types__item "><button class="link__red link__red--cheese" >сырные</button></li>
-            <li class="pizza-types__item "><button class="link__red link__red--vegan" >веганские</button></li>
+            <li class="button pizza-types__item " tabindex="0" data-filter="all" tabindex="-1"><button class="link__red" href="">все</button></li>
+            <li class="button pizza-types__item"tabindex="0" data-filter="hot" tabindex="-2"><button class="link__red link__red--pepper" >острые</button></li>
+            <li class="button pizza-types__item "tabindex="0" data-filter="meat" tabindex="-3"><button class="link__red link__red--meat" >мясные</button></li>
+            <li class="button pizza-types__item "tabindex="0" data-filter="cheese" tabindex="-4"><button class="link__red link__red--cheese" >сырные</button></li>
+            <li class="button pizza-types__item "tabindex="0" data-filter="vegan" tabindex="-5"><button class="link__red link__red--vegan" >веганские</button></li>
           </ul>
           <ul class="pizza-types__list--mobile">
             <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=""> <img src="./css/IMG/Frame14.jpg" alt=""></span></a></li>
@@ -330,7 +330,7 @@
             <li class="pizza-types__item "><a class="link__red" href="#"> <span  class=" "> <img src="./css/IMG/Frame 15.jpg" alt=""></span></a></li>
           </ul>
           <ul class="pizza-menu__list">
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item hot">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -363,7 +363,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item meat">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -396,7 +396,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item meat">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -429,7 +429,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item vegan">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -462,7 +462,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item meat hot ">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -495,7 +495,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item vegan">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -528,7 +528,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item hot ">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -561,7 +561,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item cheese">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -594,7 +594,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item cheese">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -627,7 +627,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item cheese">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -660,7 +660,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item hot">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -693,7 +693,7 @@
               <button class="btn pizza-order__btn">заказать</button>
             </div>
             </li>
-            <li class="pizza-menu__item">
+            <li class="pizza-menu__item meat">
               <div class="pizza__item--img-content">
                 <div class="type__icon--list">
               <span class="type__icon"><img src="./css/IMG/peppericon.png" alt="" /></span>
@@ -845,6 +845,7 @@
   <script src="./scripts/popup.js"></script>
   <script src="./scripts/headfix.js"></script> 
   <script src="./scripts/tabJS.js"></script> 
+  <script src="./scripts/filter.js"></script> 
 
 
   

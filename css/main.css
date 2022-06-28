@@ -1525,17 +1525,18 @@ address {
   -webkit-transition: 400ms;
   transition: 400ms;
 }
-.pizza-types__item:active {
+
+ul li.pizza-types__item:focus {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
 }
-.pizza-types__item:active .link__red {
+ul li.pizza-types__item:focus .link__red {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
 }
-.pizza-types__item:active .link__red::before {
+ul li.pizza-types__item:focus .link__red::before {
   top: -30px;
   -webkit-transition: 400ms;
   transition: 400ms;
@@ -1553,7 +1554,11 @@ address {
   letter-spacing: 1px;
   color: #000000;
 }
-
+.link__red:focus {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  color: #e52d2d;
+}
 .link__red::before {
   content: "";
   width: 24px;
@@ -1679,6 +1684,10 @@ address {
   .pizza-menu__item:nth-child(3n) {
     margin: 12px;
   }
+}
+.pizza-menu__item:hover {
+  -webkit-box-shadow: 0px 2px 10px rgba(165, 169, 176, 0.5);
+          box-shadow: 0px 2px 10px rgba(165, 169, 176, 0.5);
 }
 .pizza-menu__item:hover .pizza-menu__title {
   color: #e52d2d;

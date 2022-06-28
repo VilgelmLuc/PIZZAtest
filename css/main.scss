@@ -805,7 +805,6 @@ address {
 }
 .pizza-types__item {
   color: #000000;
-  // margin-right: 40px;
   transition: 400ms;
   position: relative;
   
@@ -822,7 +821,8 @@ address {
       transition: 400ms;
     }
   }
-    &:active{
+}
+  ul li.pizza-types__item:focus{
       transition: 400ms;
       color: $color_4;
       
@@ -835,7 +835,7 @@ address {
         transition: 400ms;
       }
     }
-  }
+  
 
 .link__red{
   position: relative;
@@ -848,9 +848,12 @@ font-family: $font-family_3;
   line-height: 24px;
   letter-spacing: 1px;
   color: $color_3;
-}
+  &:focus{
+    transition: 400ms;
+    color: $color_4;
 
-.link__red::before{
+  }
+&::before{
   content: "";
   width: 24px;
   height: 24px;
@@ -864,7 +867,7 @@ font-family: $font-family_3;
   @include mobile{
     display: none;
   }
-  
+}
 }
 .link__red--pepper::before {
   content: "";  
@@ -943,6 +946,7 @@ font-family: $font-family_3;
   }
 
   &:hover {
+    box-shadow: 0px 2px 10px rgba(165, 169, 176, 0.5);
     .pizza-menu__title {
       color: $color_4;
       transition: 0, 3s;
