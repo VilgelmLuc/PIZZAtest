@@ -661,6 +661,9 @@ address {
     width: 288px;
     height: 52px;
   }
+  &:focus{
+    border: 4px solid #8FC9FF;
+  }
 }
 .hero__img {
   position: relative;
@@ -822,7 +825,7 @@ address {
     }
   }
 }
-  ul li.pizza-types__item:focus{
+  pizza-types__item:focus{
       transition: 400ms;
       color: $color_4;
       
@@ -853,7 +856,8 @@ font-family: $font-family_3;
     color: $color_4;
 
   }
-&::before{
+}
+.link__red::before{
   content: "";
   width: 24px;
   height: 24px;
@@ -867,8 +871,12 @@ font-family: $font-family_3;
   @include mobile{
     display: none;
   }
+  &:focus{
+    top: -30px;
+    transition: 400ms;
+  }
 }
-}
+
 .link__red--pepper::before {
   content: "";  
   background: url(./IMG/Frame\ 13.jpg);

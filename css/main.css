@@ -1290,6 +1290,9 @@ address {
     height: 52px;
   }
 }
+.btn:focus {
+  border: 4px solid #8FC9FF;
+}
 
 .hero__img {
   position: relative;
@@ -1526,17 +1529,17 @@ address {
   transition: 400ms;
 }
 
-ul li.pizza-types__item:focus {
+pizza-types__item:focus {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
 }
-ul li.pizza-types__item:focus .link__red {
+pizza-types__item:focus .link__red {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
 }
-ul li.pizza-types__item:focus .link__red::before {
+pizza-types__item:focus .link__red::before {
   top: -30px;
   -webkit-transition: 400ms;
   transition: 400ms;
@@ -1559,6 +1562,7 @@ ul li.pizza-types__item:focus .link__red::before {
   transition: 400ms;
   color: #e52d2d;
 }
+
 .link__red::before {
   content: "";
   width: 24px;
@@ -1577,6 +1581,11 @@ ul li.pizza-types__item:focus .link__red::before {
   .link__red::before {
     display: none;
   }
+}
+.link__red::before:focus {
+  top: -30px;
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 .link__red--pepper::before {
