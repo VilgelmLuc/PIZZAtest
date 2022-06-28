@@ -316,6 +316,18 @@ address {
     align-items: center;
     z-index: 20;
   }
+  &::before{
+    content: "";
+    top: 10px;
+
+  }
+  &::after{
+    content: "";
+    width: 19px;
+  bottom: 10px;
+
+
+  }
 }
 .menu-burger__header span,
 .menu-burger__header:after,
@@ -326,20 +338,7 @@ address {
   background: #000000;
   margin: 0 auto;
 }
-.menu-burger__header:after {
-  width: 19px;
-}
 
-.menu-burger__header:after,
-.menu-burger__header:before {
-  content: "";
-}
-.menu-burger__header:after {
-  bottom: 10px;
-}
-.menu-burger__header:before {
-  top: 10px;
-}
 
 .menu-burger__header.open-menu span {
   opacity: 0;
@@ -348,20 +347,22 @@ address {
   margin-left: 0px;
   // padding-right: 100px;
 }
-.menu-burger__header.open-menu:before {
+.menu-burger__header.open-menu {
+  &::before{
   transform: rotate(495deg);
   top: 9px;
   transition: 0.4s;
   background: #ffffff;
   z-index: 20;
 }
-.menu-burger__header.open-menu:after {
+&::after {
   transform: rotate(-495deg);
   bottom: 28px;
   transition: 0.4s;
   background: #ffffff;
   z-index: 20;
   width: 24px;
+}
 }
 
 .logo__mobile {
@@ -904,6 +905,7 @@ font-family: $font-family_3;
   width: 100%;
 }
 .pizza-menu__item {
+  height: 572px;
   display: flex;
   flex-direction: column;
   max-width: 304px;
@@ -912,6 +914,7 @@ font-family: $font-family_3;
   border-radius: 5px;
   transition: 600ms;
   @include mobile {
+    height: auto;
     margin: 32px;
     flex-direction: row;
     min-width: 288px;
@@ -975,84 +978,8 @@ font-family: $font-family_3;
     padding: 8px 0 0 8px;
   }
 }
-.pizza-menu__title {
-  font-family: $font-family_3;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 6px;
-  text-align: center;
-  transition: 0, 3s;
-  @include tablets {
-    font-size: 20px;
-    line-height: 27px;
-  }
-  @include mobile {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 0px;
-    padding-top: 20px;
-  }
-}
-.pizza-menu__subtitle {
-  font-family: $font-family_4;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: center;
-  color: $color_5;
-  margin-bottom: 8px;
-  padding: 0 20px;
-  @include mobile {
-    text-align: left;
-    padding: 0;
-    font-size: 11px;
-    line-height: 16px;
-    margin-bottom: 4px;
-  }
-}
-.pizza-size__title {
-  font-family: $font-family_4;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: center;
-  color: $color_3;
-  margin-bottom: 4px;
-}
-.pizza-size__list {
-  margin: 0 auto 14px;
-  display: flex;
-  width: 182px;
-  height: 32px;
-  border-radius: 4px;
-  justify-content: space-between;
-  background-color: $background-color_2;
-  align-items: center;
-  border: 1px;
-  @include mobile {
-    width: 164px;
-  }
-}
-.tabs__pane {
-  display: none;
-}
 
-.tabs__pane_show {
-  display: block;
 
-  @include tablets {
-    min-width: 178px;
-    min-height: 178px;
-  }
-  @include tablets {
-    min-width: 80px;
-    min-height: 80px;
-  }
-}
 .pizza__frames {
   width: 240px;
   height: 240px;
@@ -1075,46 +1002,11 @@ font-family: $font-family_3;
     height: 80px;
   }
 }
-.pizza__borderL {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  border: 1px dashed red;
-  
-  @include tablets {
-    width: 173px;
-    height: 173px;
-  }
-  @include mobile {
-    width: 80px;
-    height: 80px;
-  }
-}
 
-.pizza__borderM {
-  border-radius: 50%;
-  width: 183px;
-  height: 183px;
-  border: 1px dashed #dcdfe2;
-  
-  @include tablets {
-    width: 154px;
-    height: 154px;
-  }
-  @include mobile {
-    width: 70px;
-    height: 70px;
-  }
-}
-.pizza__borderM--default {
-  border: none;
-}
 .pizza__size--20{
   width: 150px;
   height: 150px;
-  // background: url(./IMG/ital120.jpg) no-repeat center center;
-  // background-size: contain;
-  position: relative;
+    position: relative;
   @include tablets {
     width: 140px;
     height: 140px;
@@ -1170,8 +1062,6 @@ font-family: $font-family_3;
 .pizza__size--30 {
   width: 184px;
   height: 184px;
-  // background: url(./IMG/ital120.jpg) no-repeat center center;
-  // background-size: contain;
   position: relative;
   @include tablets {
     width: 154px;
@@ -1206,8 +1096,6 @@ font-family: $font-family_3;
   width: 212px;
   height: 212px;
   position: relative;
-  // background: url(./IMG/ital120.jpg) no-repeat center center;
-  // background-size: contain;
   @include tablets {
     width: 183px;
     height: 183px;
@@ -1215,6 +1103,74 @@ font-family: $font-family_3;
   @include mobile {
     width: 80px;
     height: 80px;
+  }
+}
+.tab{
+  display: none;
+  }
+.tab.active{
+  display: block;
+}
+.pizza-menu__title {
+  font-family: $font-family_3;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 6px;
+  text-align: center;
+  transition: 0, 3s;
+  @include tablets {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  @include mobile {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+  }
+}
+.pizza-menu__subtitle {
+  font-family: $font-family_4;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: $color_5;
+  margin-bottom: 8px;
+  padding: 0 20px;
+  @include mobile {
+    text-align: left;
+    padding: 0;
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 4px;
+  }
+}
+.pizza-size__title {
+  font-family: $font-family_4;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: $color_3;
+  margin-bottom: 4px;
+}
+.pizza-size__list {
+  margin: 0 auto 14px;
+  display: flex;
+  width: 182px;
+  height: 36px;
+  border-radius: 4px;
+  justify-content: space-between;
+  background-color: $background-color_2;
+  align-items: center;
+  border: 1px;
+  @include mobile {
+    width: 164px;
   }
 }
 .pizza-size__item {
@@ -1225,8 +1181,6 @@ font-family: $font-family_3;
   border-radius: 3px;
   display: flex;
   justify-content: space-around;
-}
-.pizza-size__btn {
   border: none;
   font-family: $font-family_4;
   font-style: normal;
@@ -1237,19 +1191,15 @@ font-family: $font-family_3;
   color: $color_3;
   background: inherit;
   transition: 400ms;
-}
-.pizza-size__btn--active {
-  background: #ffffff;
-  cursor: default;
-  transition: 400ms;
   width: 50px;
   height: 28px;
   border-radius: 3px;
 }
-.pizza-size__btn:not(.pizza-size__btn--active):hover,
-.pizza-size__btn:not(.pizza-size__btn--active):focus {
-  background: $background-color_2;
+.pizza-size__item.active {
+  background: #ffffff;
+  
 }
+
 .pizza-price__title {
   font-family: $font-family_4;
   font-style: normal;

@@ -835,6 +835,15 @@ address {
     z-index: 20;
   }
 }
+.menu-burger__header::before {
+  content: "";
+  top: 10px;
+}
+.menu-burger__header::after {
+  content: "";
+  width: 19px;
+  bottom: 10px;
+}
 
 .menu-burger__header span,
 .menu-burger__header:after,
@@ -846,23 +855,6 @@ address {
   margin: 0 auto;
 }
 
-.menu-burger__header:after {
-  width: 19px;
-}
-
-.menu-burger__header:after,
-.menu-burger__header:before {
-  content: "";
-}
-
-.menu-burger__header:after {
-  bottom: 10px;
-}
-
-.menu-burger__header:before {
-  top: 10px;
-}
-
 .menu-burger__header.open-menu span {
   opacity: 0;
   -webkit-transition: 0.5s;
@@ -871,7 +863,7 @@ address {
   margin-left: 0px;
 }
 
-.menu-burger__header.open-menu:before {
+.menu-burger__header.open-menu::before {
   -webkit-transform: rotate(495deg);
           transform: rotate(495deg);
   top: 9px;
@@ -880,8 +872,7 @@ address {
   background: #ffffff;
   z-index: 20;
 }
-
-.menu-burger__header.open-menu:after {
+.menu-burger__header.open-menu::after {
   -webkit-transform: rotate(-495deg);
           transform: rotate(-495deg);
   bottom: 28px;
@@ -1639,6 +1630,7 @@ address {
 }
 
 .pizza-menu__item {
+  height: 572px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1656,6 +1648,7 @@ address {
 }
 @media screen and (max-width: 481px) {
   .pizza-menu__item {
+    height: auto;
     margin: 32px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1740,107 +1733,6 @@ address {
   }
 }
 
-.pizza-menu__title {
-  font-family: "Alegreya";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 6px;
-  text-align: center;
-  -webkit-transition: 0, 3s;
-  transition: 0, 3s;
-}
-@media screen and (max-width: 835px) {
-  .pizza-menu__title {
-    font-size: 20px;
-    line-height: 27px;
-  }
-}
-@media screen and (max-width: 481px) {
-  .pizza-menu__title {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 0px;
-    padding-top: 20px;
-  }
-}
-
-.pizza-menu__subtitle {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: center;
-  color: #848a9a;
-  margin-bottom: 8px;
-  padding: 0 20px;
-}
-@media screen and (max-width: 481px) {
-  .pizza-menu__subtitle {
-    text-align: left;
-    padding: 0;
-    font-size: 11px;
-    line-height: 16px;
-    margin-bottom: 4px;
-  }
-}
-
-.pizza-size__title {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: center;
-  color: #000000;
-  margin-bottom: 4px;
-}
-
-.pizza-size__list {
-  margin: 0 auto 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 182px;
-  height: 32px;
-  border-radius: 4px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #eff0f1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px;
-}
-@media screen and (max-width: 481px) {
-  .pizza-size__list {
-    width: 164px;
-  }
-}
-
-.tabs__pane {
-  display: none;
-}
-
-.tabs__pane_show {
-  display: block;
-}
-@media screen and (max-width: 835px) {
-  .tabs__pane_show {
-    min-width: 178px;
-    min-height: 178px;
-  }
-}
-@media screen and (max-width: 835px) {
-  .tabs__pane_show {
-    min-width: 80px;
-    min-height: 80px;
-  }
-}
-
 .pizza__frames {
   width: 240px;
   height: 240px;
@@ -1869,48 +1761,6 @@ address {
     width: 80px;
     height: 80px;
   }
-}
-
-.pizza__borderL {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  border: 1px dashed red;
-}
-@media screen and (max-width: 835px) {
-  .pizza__borderL {
-    width: 173px;
-    height: 173px;
-  }
-}
-@media screen and (max-width: 481px) {
-  .pizza__borderL {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.pizza__borderM {
-  border-radius: 50%;
-  width: 183px;
-  height: 183px;
-  border: 1px dashed #dcdfe2;
-}
-@media screen and (max-width: 835px) {
-  .pizza__borderM {
-    width: 154px;
-    height: 154px;
-  }
-}
-@media screen and (max-width: 481px) {
-  .pizza__borderM {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-.pizza__borderM--default {
-  border: none;
 }
 
 .pizza__size--20 {
@@ -2044,6 +1894,95 @@ address {
   }
 }
 
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+.pizza-menu__title {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 6px;
+  text-align: center;
+  -webkit-transition: 0, 3s;
+  transition: 0, 3s;
+}
+@media screen and (max-width: 835px) {
+  .pizza-menu__title {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .pizza-menu__title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+  }
+}
+
+.pizza-menu__subtitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #848a9a;
+  margin-bottom: 8px;
+  padding: 0 20px;
+}
+@media screen and (max-width: 481px) {
+  .pizza-menu__subtitle {
+    text-align: left;
+    padding: 0;
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 4px;
+  }
+}
+
+.pizza-size__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.pizza-size__list {
+  margin: 0 auto 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 182px;
+  height: 36px;
+  border-radius: 4px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #eff0f1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px;
+}
+@media screen and (max-width: 481px) {
+  .pizza-size__list {
+    width: 164px;
+  }
+}
+
 .pizza-size__item {
   text-align: center;
   width: 28%;
@@ -2055,9 +1994,6 @@ address {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.pizza-size__btn {
   border: none;
   font-family: "Roboto";
   font-style: normal;
@@ -2069,21 +2005,13 @@ address {
   background: inherit;
   -webkit-transition: 400ms;
   transition: 400ms;
-}
-
-.pizza-size__btn--active {
-  background: #ffffff;
-  cursor: default;
-  -webkit-transition: 400ms;
-  transition: 400ms;
   width: 50px;
   height: 28px;
   border-radius: 3px;
 }
 
-.pizza-size__btn:not(.pizza-size__btn--active):hover,
-.pizza-size__btn:not(.pizza-size__btn--active):focus {
-  background: #eff0f1;
+.pizza-size__item.active {
+  background: #ffffff;
 }
 
 .pizza-price__title {
