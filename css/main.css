@@ -1320,9 +1320,6 @@ address {
     height: 52px;
   }
 }
-.btn:focus {
-  border: 4px solid #8FC9FF;
-}
 
 .hero__img {
   position: relative;
@@ -1563,16 +1560,19 @@ address {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
+  border: none;
 }
 .pizza-types__item:focus .link__red {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
+  border: none;
 }
 .pizza-types__item:focus .link__red::before {
   top: -30px;
   -webkit-transition: 400ms;
   transition: 400ms;
+  border: none;
 }
 
 .link__red {
@@ -1591,6 +1591,7 @@ address {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
+  border: none;
 }
 
 .link__red::before {
@@ -1616,6 +1617,7 @@ address {
   top: -30px;
   -webkit-transition: 400ms;
   transition: 400ms;
+  border: none;
 }
 
 .link__red--pepper::before {
@@ -2097,6 +2099,9 @@ address {
   max-width: 240px;
   height: 52px;
   margin: 0 auto 40px;
+}
+.pizza-order__btn:focus {
+  border: 4px solid #8FC9FF;
 }
 @media screen and (max-width: 835px) {
   .pizza-order__btn {
