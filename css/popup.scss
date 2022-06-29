@@ -273,10 +273,21 @@
 }
 .form__block {
   border-radius: 5px;
+  position: relative;
 
   border: 1px solid #c5cbd5;
   flex: 1;
   margin-right: 20px;
+  &:hover{
+    .focus-title{
+        display: block;
+    }
+  }
+  &:focus{
+    .focus-title{
+        display: block;
+    }
+  }
   &:last-child {
     margin-right: 0;
   }
@@ -288,19 +299,42 @@
   padding: 18px 11px;
   border: solid 3px transparent;
   border-radius: 5px;
+  position: relative;
   &_textarea {
     height: 180px;
     resize: none;
   }
-  &:focus {
-    border-color: #8fc9ff;
-    outline: none;
-  }
   &:hover {
-    border-color: #000000;
-    outline: none;
-  }
+      border-color: #000000;
+      outline: none;
+      
+      .focus-title{
+          display: block;
+        }
+    }
+    &:focus {
+      border-color: #8fc9ff;
+      outline: none;
+      & + .focus-title{
+        visibility: visible;  
+    }
+    }
 }
+  .focus-title{
+    content: "Dfit bvz";
+    position: absolute;
+    left: 25%;
+    transform: translateX(-90%);
+    top: -10px;
+    color: #8fc9ff;
+    z-index: 5;
+    background: #ffffff;
+    visibility: hidden;
+  &:focus{
+    visibility: visible;  
+}
+  }
+
 
 .form__controls {
   display: flex;
@@ -308,10 +342,7 @@
   flex-direction: column;
   margin-bottom: 16px;
 }
-//  .radio{
-//     display: flex;
-//     margin-bottom: 16px;
-//  }
+
 
 .radio__title {
   font-family: "Roboto";

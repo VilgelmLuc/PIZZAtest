@@ -825,17 +825,23 @@ address {
     }
   }
 }
-  pizza-types__item:focus{
+  .pizza-types__item:focus{
       transition: 400ms;
       color: $color_4;
+      border: none;
+
       
       .link__red {
         transition: 400ms;
         color: $color_4;
+        border: none;
+
       }
       .link__red::before {
         top: -30px;
         transition: 400ms;
+        border: none;
+
       }
     }
   
@@ -854,6 +860,7 @@ font-family: $font-family_3;
   &:focus{
     transition: 400ms;
     color: $color_4;
+    border: none;
 
   }
 }
@@ -874,6 +881,8 @@ font-family: $font-family_3;
   &:focus{
     top: -30px;
     transition: 400ms;
+    border: none;
+
   }
 }
 

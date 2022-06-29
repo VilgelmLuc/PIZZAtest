@@ -338,11 +338,18 @@
 
 .form__block {
   border-radius: 5px;
+  position: relative;
   border: 1px solid #c5cbd5;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-right: 20px;
+}
+.form__block:hover .focus-title {
+  display: block;
+}
+.form__block:focus .focus-title {
+  display: block;
 }
 .form__block:last-child {
   margin-right: 0;
@@ -354,18 +361,41 @@
   padding: 18px 11px;
   border: solid 3px transparent;
   border-radius: 5px;
+  position: relative;
 }
 .form__input_textarea {
   height: 180px;
   resize: none;
 }
+.form__input:hover {
+  border-color: #000000;
+  outline: none;
+}
+.form__input:hover .focus-title {
+  display: block;
+}
 .form__input:focus {
   border-color: #8fc9ff;
   outline: none;
 }
-.form__input:hover {
-  border-color: #000000;
-  outline: none;
+.form__input:focus + .focus-title {
+  visibility: visible;
+}
+
+.focus-title {
+  content: "Dfit bvz";
+  position: absolute;
+  left: 25%;
+  -webkit-transform: translateX(-90%);
+          transform: translateX(-90%);
+  top: -10px;
+  color: #8fc9ff;
+  z-index: 5;
+  background: #ffffff;
+  visibility: hidden;
+}
+.focus-title:focus {
+  visibility: visible;
 }
 
 .form__controls {
@@ -1529,17 +1559,17 @@ address {
   transition: 400ms;
 }
 
-pizza-types__item:focus {
+.pizza-types__item:focus {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
 }
-pizza-types__item:focus .link__red {
+.pizza-types__item:focus .link__red {
   -webkit-transition: 400ms;
   transition: 400ms;
   color: #e52d2d;
 }
-pizza-types__item:focus .link__red::before {
+.pizza-types__item:focus .link__red::before {
   top: -30px;
   -webkit-transition: 400ms;
   transition: 400ms;
