@@ -127,18 +127,24 @@
                    
                         <div class="form__col">
                             <div class="form__row">
+                              <div class="form-group">
+                                <label for="email" class="control-label">Email-адрес</label>
+                                <input id="email" type="email" name="email" required="required" class="form-control" value=""
+                                  placeholder="Email-адрес">
+                                <div class="invalid-feedback"></div>
+                              </div>
                                 <label class="form__block">
-                                    <input type="text" class="form__input"  pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Ваше имя"><p class="focus-title" tabindex="0">  Ваше имя  </p>
+                                    <input type="text" class="form__input form-control"  pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Ваше имя" required><p class="focus-title" tabindex="0">  Ваше имя  </p>
                                 </label>
                                 <label class="form__block">
                                     <input type="tel" class="form__input"   type="tel"
-                                    pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон">
+                                    pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон" required>
                                     <p class="focus-title" tabindex="0">Телефон</p>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
-                                    <input type="text" class="form__input" placeholder="Адрес доставки">
+                                    <input type="text" class="form__input" placeholder="Адрес доставки" required>
                                     <p class="focus-title" tabindex="0">Адрес доставки</p>
                                 </label>
                             </div>
@@ -848,6 +854,8 @@
   <script src="./scripts/headfix.js"></script> 
   <script src="./scripts/tabJS.js"></script> 
   <script src="./scripts/filter.js"></script> 
+  <script src="./scripts/forms.js"></script> 
+
 
 
   

@@ -293,6 +293,10 @@
   }
 }
 
+.form-control.is-invalid {
+    border:2px solid #dc3545;
+  }
+
 .form__input {
   width: 100%;
   border: none;
